@@ -190,15 +190,15 @@ class TestViews(TestSetUp):
         self.assertEqual(res.status_code, 200)
         
         # test EUR-EGP currancy conversion 
-        self.assertEqual("{:.2f}".format(res.data['data'][0]['user_currancy_price']), "{:.2f}".format(res.data['data'][0]['price_eur']*18.798164))
-        self.assertEqual("{:.2f}".format(res.data['data'][1]['user_currancy_price']), "{:.2f}".format(res.data['data'][1]['price_eur']*18.798164))
-        self.assertEqual("{:.2f}".format(res.data['data'][2]['user_currancy_price']), "{:.2f}".format(res.data['data'][2]['price_eur']*18.798164))
+        self.assertEqual("{:.2f}".format(res.data['data'][0]['user_currancy_price']), "{:.2f}".format(self.test_prices[0] * 18.798164))
+        self.assertEqual("{:.2f}".format(res.data['data'][1]['user_currancy_price']), "{:.2f}".format(self.test_prices[1] * 18.798164))
+        self.assertEqual("{:.2f}".format(res.data['data'][2]['user_currancy_price']), "{:.2f}".format(self.test_prices[2] * 18.798164))
         res = self.client.get(self.products_records_for_user_url + 'AED', follow=True)
         self.assertEqual(res.status_code, 200)
         # test EUR-AED currancy conversion
-        self.assertEqual("{:.2f}".format(res.data['data'][0]['user_currancy_price']), "{:.2f}".format(res.data['data'][0]['price_eur']*4.401215))
-        self.assertEqual("{:.2f}".format(res.data['data'][1]['user_currancy_price']), "{:.2f}".format(res.data['data'][1]['price_eur']*4.401215))
-        self.assertEqual("{:.2f}".format(res.data['data'][2]['user_currancy_price']), "{:.2f}".format(res.data['data'][2]['price_eur']*4.401215))
+        self.assertEqual("{:.2f}".format(res.data['data'][0]['user_currancy_price']), "{:.2f}".format(self.test_prices[0] * 4.401215))
+        self.assertEqual("{:.2f}".format(res.data['data'][1]['user_currancy_price']), "{:.2f}".format(self.test_prices[1] * 4.401215))
+        self.assertEqual("{:.2f}".format(res.data['data'][2]['user_currancy_price']), "{:.2f}".format(self.test_prices[2] * 4.401215))
 
     def test_integrate_purchase_and_get_revenue(self):
         self.client.credentials(HTTP_AUTHORIZATION='token ' + self.user_token)

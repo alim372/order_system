@@ -19,7 +19,7 @@ to create normal user please use register endpoint
 
 -----------------------------------------------------
 
-important notes 
+important notes :
 
 
 **User model:**
@@ -44,7 +44,7 @@ http://localhost:8000/redoc/
 to know more about each endpoint 
 don't forget copy and past token in authorize and also don't forget write word "token" before the token which you can get from login endpoint 
 
-**test case** 
+**testing** 
 to know more about unit and integration testing use this command 
 **"python manage.py test"**
 and check this file to know more about each test case **'test-cases.txt'**

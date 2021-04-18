@@ -1,0 +1,105 @@
+
+------------------------------unit testing--------------------------
+
+-test super user 
+test creating super user and login with this credentials
+--------------------------------------------------------------------
+
+-test if user can register with no data
+try use no data when register 
+--------------------------------------------------------------------
+
+- test if user can register with invalid password 
+try use short password when register 
+--------------------------------------------------------------------
+
+- test if user can register with incomplete data
+--------------------------------------------------------------------
+
+- test if user can register and login correctly.
+test if user can user the credentials used in register in login 
+--------------------------------------------------------------------
+
+- test if user can login with no credentials  data 
+--------------------------------------------------------------------
+
+- test if user can login with no password
+--------------------------------------------------------------------
+
+- test creating new product with no token
+test if anonymous user can create new product 
+--------------------------------------------------------------------
+
+- test creating new product with invalid token
+test if any generated invalid token can use to create new products
+--------------------------------------------------------------------
+
+test creating new product with 'user' permission token
+--------------------------------------------------------------------
+
+test creating new product with admin token valid data.
+--------------------------------------------------------------------
+
+test creating new product with invalid price data
+--------------------------------------------------------------------
+
+test creating new product with incomplete data
+--------------------------------------------------------------------
+
+test getting records of products data
+--------------------------------------------------------------------
+
+test getting records products data with user token 
+when use the api which is speceified for admin test if normal user can use it.
+--------------------------------------------------------------------
+
+test getting exist single record product
+--------------------------------------------------------------------
+
+test getting exist single record products with user token
+when use the api which is speceified for admin test if normal user can use it.
+--------------------------------------------------------------------
+
+test getting non-exist single record products
+--------------------------------------------------------------------
+
+test updating single record products
+--------------------------------------------------------------------
+
+test updating single record products with user token
+--------------------------------------------------------------------
+
+test deleting exist single record products
+--------------------------------------------------------------------
+
+test deleting not exist single record products
+--------------------------------------------------------------------
+
+test if normal user can purchase product
+--------------------------------------------------------------------
+
+test purchasing non-existing product
+--------------------------------------------------------------------
+
+test the currancy when get all products records for user
+
+
+------------------------------integreation testing----------------------------
+
+test integration between creating and get this created record
+check if the admin add new record in product, is accessible when getting data using the id 
+of this created record 
+--------------------------------------------------------------------
+ 
+test integration between creating and getting all records of products 
+check if the admin add new record in product, is exist when getting all data 
+--------------------------------------------------------------------
+
+test integration between purchasing products and geting purchased products
+check if the normal user purchase new record of product, is exist when getting all purchased data 
+--------------------------------------------------------------------
+
+test integration between purchasing and getting revenue by admin
+--------------------------------------------------------------------
+
+ 
