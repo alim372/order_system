@@ -11,7 +11,7 @@ there are two permission:
 
 **-administartor**
 to create user with administrator's permission use the command of 
-(python manage.py createsuperuser)
+(**python manage.py createsuperuser**)
 and then use login endpoint with the inserted credintials to get the token and use it 
 
 **-user**
