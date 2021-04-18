@@ -188,14 +188,14 @@ class TestViews(TestSetUp):
         self.client.credentials(HTTP_AUTHORIZATION='token ' + self.user_token)
         res = self.client.get(self.products_records_for_user_url + 'EGP', follow=True)
         self.assertEqual(res.status_code, 200)
-        # pdb.set_trace()
-        self.assertEqual("{:.2f}".format(res.data['data'][0]['user_currancy_price']), "{:.2f}".format(res.data['data'][0]['price_eur']*18.792))
-        self.assertEqual("{:.2f}".format(res.data['data'][1]['user_currancy_price']), "{:.2f}".format(res.data['data'][1]['price_eur']*18.792))
-        self.assertEqual("{:.2f}".format(res.data['data'][2]['user_currancy_price']), "{:.2f}".format(res.data['data'][2]['price_eur']*18.792))
         
+        # test EUR-EGP currancy conversion 
+        self.assertEqual("{:.2f}".format(res.data['data'][0]['user_currancy_price']), "{:.2f}".format(res.data['data'][0]['price_eur']*18.798164))
+        self.assertEqual("{:.2f}".format(res.data['data'][1]['user_currancy_price']), "{:.2f}".format(res.data['data'][1]['price_eur']*18.798164))
+        self.assertEqual("{:.2f}".format(res.data['data'][2]['user_currancy_price']), "{:.2f}".format(res.data['data'][2]['price_eur']*18.798164))
         res = self.client.get(self.products_records_for_user_url + 'AED', follow=True)
         self.assertEqual(res.status_code, 200)
-        # pdb.set_trace()
+        # test EUR-AED currancy conversion
         self.assertEqual("{:.2f}".format(res.data['data'][0]['user_currancy_price']), "{:.2f}".format(res.data['data'][0]['price_eur']*4.401215))
         self.assertEqual("{:.2f}".format(res.data['data'][1]['user_currancy_price']), "{:.2f}".format(res.data['data'][1]['price_eur']*4.401215))
         self.assertEqual("{:.2f}".format(res.data['data'][2]['user_currancy_price']), "{:.2f}".format(res.data['data'][2]['price_eur']*4.401215))

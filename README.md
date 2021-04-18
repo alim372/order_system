@@ -7,6 +7,8 @@ using this command
 **" pip install -r requirements.txt "**
 
 there are two permission:
+
+
 **-administartor**
 to create user with administrator's permission use the command of 
 (python manage.py createsuperuser)
@@ -18,6 +20,8 @@ to create normal user please use register endpoint
 -----------------------------------------------------
 
 important notes 
+
+
 **User model:**
 -the initial django auth User model was overrided and replaced with custom User model 
 also i have replace create_superuser function with another customized one in Custom User Manager class 
